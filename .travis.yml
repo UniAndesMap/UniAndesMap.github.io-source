@@ -1,3 +1,18 @@
+branches:
+  only:
+  - master
+language: python
+python:
+  - 2.7
+
+install:
+  # Updates the catalog.
+  - sudo apt-get update -qq
+  # Installs the packages.
+  - sudo apt-get install python-pip curl -y
+  # Installs the Python packages for Pelican.
+  - pip install -r requirements.txt
+
 script:
 - bash ./deploy.sh
 env:
