@@ -16,14 +16,14 @@ if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
         git config --global user.name "BogoMap"
     fi
     # Using token clone gh-pages branch
-    git clone --quiet --branch=$BRANCH https://${GH_TOKEN}@github.com/$TARGET_REPO built_website > /dev/null
+    git clone --branch=$BRANCH https://${GH_TOKEN}@github.com/$TARGET_REPO built_website 
     # Go into directory and copy data we're interested in to that directory
     cd built_website
     git rm -rf *
     # Add, commit and push files
     git add -f .
     git commit -a -m "Travis build $TRAVIS_BUILD_NUMBER pushed to Github Pages"
-    git push -fq origin $BRANCH > /dev/null
+    git push -fq origin $BRANCH 
     echo -e "Deploy completed\n"
 fi
 
