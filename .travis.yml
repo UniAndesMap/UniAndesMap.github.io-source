@@ -5,6 +5,9 @@ language: python
 python:
 - 2.7
 
+before_install:
+- git submodule update --init --recursive
+
 install:
 # Updates the catalog.
 - sudo apt-get update -qq
@@ -16,6 +19,7 @@ install:
 script:
 # Installs Pelican
 - export PYTHONIOENCODING=utf-8
+- mkdir output
 # Copies the extra directory
 - cp -r extra/* output/
 # Generates the package
@@ -30,9 +34,6 @@ notifications:
 env:
   global:
   - secure: "XqEd+RISJSHWL+k7Kp7Oc5l4EhJLLVg01s9VaQ9m33o2Ysh9/Bz+dc7D+i9tNI0OS6xYJRZVVjRDiTdfv3L8dPxK6j4EY5A+wqZQ9tYESKngZbp7vB3K73iO5FqSQHv3Qei8LYsiaSGutub073UNHZM7i4Dtok0Fsv/9DoGxGTNI5HmKW4ztEfby3tooSrnBiQVIlztekcxshkzmNSdmKPN+zQUf2HiIbBYIkPBI+hhsmzaqvcgM/iQF1kFa3zh7QffNoPiMIbe2IG//emsYAzDeNw1wajxzzou3/UEG+5jPGCcIikrVKYGW17tdb8QFhr6infwi+CmxeCwT04J557vI/6ZTwAz/CNZypmriEyfLX4A1SwNC78v2tjdiPEVNXKnGcQy9wREQIrhoiMNLQSRlkBfijmUKeLUkS0Ar0z1YvmXxSIe6aCG1IOW4eoqQdk0kP9ymv4sRVNun8xEBhw4dcVUSdTAqDZ2Nz6J5n+Yulj0xm7B8hVC6OtXgJbzFJvZlm1ebQKh5D9G/7b/C2gKHL8qD5/zH+rTgqx3YzgGGyofhLX7+47LwGDrIORMH9LmE2FB+MrjAzjjttF6/JuH5JPdlfzAhX18Ujvoz7Jj3+VQ3uV3gOiOfepoOKgaxdzyTD26Mov0HbaR4XAynQQhyDsQGhP0+KxzoZaXcMJI="
-
-before_install:
-- git submodule update --init --recursive
 
 after_success: bash deploy.sh
 
