@@ -52,11 +52,8 @@ SOCIAL = (('email', 'mailto:contacto@mapanica.net'),
           ('twitter', 'http://www.twitter.com/osm_ni'),
           )
 
-MENUITEMS = (('Mapa de Nicaragua', 'http://mapanica.net', 'map'),
-             ('Rutas Managua', '/index.html', 'public-transport'),
-             ('Mapas para móviles', 'http://mapanica.net/mapas-moviles.html', 'mobile'),
-             ('Comunidad', 'http://mapanica.net/comunidad.html', 'community'),
-             ('Descargar datos', 'http://datos.mapanica.net', 'datos'),
+MENUITEMS = (('Rutas Duitamap', '/index.html', 'public-transport'),
+             ('BogoMap', 'http://BogoMap.co', 'community'),
           )
 
 DEFAULT_PAGINATION = False
