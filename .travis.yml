@@ -14,8 +14,26 @@ install:
   - pip install -r requirements.txt
 
 script:
-- bash ./deploy.sh
+  # Installs Pelican
+  - export PYTHONIOENCODING=utf-8
+  # Copies the extra directory
+  - cp -r extra/* output/
+  # Generates the package
+  - pelican
+  - find .
+
+notifications:
+  email:
+    on_success: always
+    on_failure: always
+
 env:
   global:
-  - GITHUB_REPO: jhergon/jhergon.github.io
-  - secure: PQjcvgnfpJpRtPM0WNBYFvI90PACWmK5Y1zoC3MqDMSYtJaII+2+I1S1FqyWEciUICyoewEDLSnk6PksIHDEqY4sB0yXie+DmG5xou+zUyX7f01BULLKXdAHnOiu1EoTrszp3BY0zs1EBbILbM8iuXb/Vt/w7d8Sq/8QHD4jP+B1PtDFrYF0ZBzDUCZAFH5XoAEiWNzKbiZgmlY0fsdWmY8GuaSM0jQWzDOMwAvgYNB1s67zdlACA72nqPiS+qoalCuXdlMvMzc6FU1Q6dFAIVczy3IQeIBIKJnEuwvCScAj/ezH4zpowmFpZDqquUEN2GIC7eCDTeHK0NZzVPpOiKdximbXzZrX04JmaHMYhSEXPXaBMhk2Y31I+P2/WqpT1hUek9ouMd7epvRh1lx2niWG2/Im3fzEwbix2y+goPo/1nXlaImMy7FVN7HPbHEF0OI5GaJtRLLvEoi8pLtEcOSUFLRbMgIDZdc4KFBM4KSc5OAR308It6GBVC9wTvII5me2TjJXwV5UgndkHoQ/oD6QuviJrvvQs9POCrehBnlZC+Q/A7ccX3qNv3hxlc2WUkZEQn8Npyj5scM4JjaJnFXimNL3s++bAAtzbYyRe7vRZ4cMHeV21skphxUqWBGE+zVG73H3qom8eTBEvyALvfT6nVifMnNVEN5/Ed6GEm4=
+    secure: PQjcvgnfpJpRtPM0WNBYFvI90PACWmK5Y1zoC3MqDMSYtJaII+2+I1S1FqyWEciUICyoewEDLSnk6PksIHDEqY4sB0yXie+DmG5xou+zUyX7f01BULLKXdAHnOiu1EoTrszp3BY0zs1EBbILbM8iuXb/Vt/w7d8Sq/8QHD4jP+B1PtDFrYF0ZBzDUCZAFH5XoAEiWNzKbiZgmlY0fsdWmY8GuaSM0jQWzDOMwAvgYNB1s67zdlACA72nqPiS+qoalCuXdlMvMzc6FU1Q6dFAIVczy3IQeIBIKJnEuwvCScAj/ezH4zpowmFpZDqquUEN2GIC7eCDTeHK0NZzVPpOiKdximbXzZrX04JmaHMYhSEXPXaBMhk2Y31I+P2/WqpT1hUek9ouMd7epvRh1lx2niWG2/Im3fzEwbix2y+goPo/1nXlaImMy7FVN7HPbHEF0OI5GaJtRLLvEoi8pLtEcOSUFLRbMgIDZdc4KFBM4KSc5OAR308It6GBVC9wTvII5me2TjJXwV5UgndkHoQ/oD6QuviJrvvQs9POCrehBnlZC+Q/A7ccX3qNv3hxlc2WUkZEQn8Npyj5scM4JjaJnFXimNL3s++bAAtzbYyRe7vRZ4cMHeV21skphxUqWBGE+zVG73H3qom8eTBEvyALvfT6nVifMnNVEN5/Ed6GEm4=
+
+before_install:
+  - git submodule update --init --recursive
+
+after_success: bash deploy.sh
+
+
