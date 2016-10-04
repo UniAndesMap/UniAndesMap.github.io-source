@@ -12,7 +12,7 @@ SITEKEYWORDS = 'Bus, Buses, Rutas, Ruta, IRTRAMMA, TUC, Transporte, Transporte U
 USE_LESS = True
 SITEURL = 'https://jhergon.github.io'
 #SITEURL = 'http://localhost:8000'
-SITELOGO = '/images/mapanica-rutas.png'
+#SITELOGO = '/images/mapanica-rutas.png'
 THEME = 'themes/mombacho'
 
 FAVICON = '/images/favicon.ico'
