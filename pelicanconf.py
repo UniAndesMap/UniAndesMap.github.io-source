@@ -3,11 +3,11 @@
 
 from __future__ import unicode_literals
 
-AUTHOR = u'OpenStreetMap Nicaragua'
-SITENAME = u'MapaNica.net - Rutas de Managua y Ciudad Sandino'
+AUTHOR = u'BogoMap Team, Proyecto Curuba'
+SITENAME = u'DuitaMap - Rutas de buses de Duitama'
 SITESUBTITLE = 'Transporte Urbano Duitama, Boyacá, Colombia'
-SITEDESCRIPTION = 'Mapa de la red de las rutas de buses del transporte urbano colectivo (TUC) de Managua y Ciudad Sandino'
-SITEKEYWORDS = 'Bus, Buses, Rutas, Ruta, IRTRAMMA, TUC, Transporte, Transporte Urbano Colectivo, Nicaragua, Managua, CpenStreetMap, Transporte público, Datos Abuertos, Open Data'
+SITEDESCRIPTION = 'Mapa de rutas de buses de Duitama'
+SITEKEYWORDS = 'Bus, Buses, Rutas, Ruta, Transporte, Colombia, Duitama, OpenStreetMap, Transporte público, Datos Abiertos, Open Data'
 
 USE_LESS = True
 SITEURL = 'https://jhergon.github.io'
@@ -32,10 +32,10 @@ CC_LICENSE = { 'name': 'Creative Commons Attribution-ShareAlike', 'version':'4.0
 PATH = 'content'
 STATIC_PATHS = ['images','php']
 
-TIMEZONE = 'America/Managua'
+TIMEZONE = 'America/Bogota'
 
 DEFAULT_LANG = u'es'
-OG_LOCALE = u'es_NI'
+OG_LOCALE = u'es_CO'
 DEFAULT_DATE_FORMAT = ('%d %B %Y')
 
 # Feed generation is usually not desired when developing
@@ -47,9 +47,9 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Social widget
-SOCIAL = (('email', 'mailto:contacto@mapanica.net'),
-          ('facebook', 'http://www.facebook.com/mapanica'),
-          ('twitter', 'http://www.twitter.com/osm_ni'),
+SOCIAL = (('email', 'mailto:contacto@bogomap.co'),
+          ('facebook', 'http://www.facebook.com/BogoMap'),
+          ('twitter', 'http://www.twitter.com/bogomap'),
           )
 
 MENUITEMS = (('Rutas Duitamap', '/index.html', 'public-transport'),
