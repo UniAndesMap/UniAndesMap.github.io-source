@@ -3,7 +3,7 @@
 # Travis was configured to push in the remote repository.
 
 BRANCH=master
-TARGET_REPO=jhergon/jhergon.github.io.git
+TARGET_REPO=UniAndesMap/uniandesmap.github.io.git
 PELICAN_OUTPUT_FOLDER=output
 
 echo -e "Building DuitaMap"
