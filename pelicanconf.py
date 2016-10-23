@@ -4,13 +4,13 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'BogoMap Team, Proyecto Curuba'
-SITENAME = u'DuitaMap - Rutas de buses de Duitama'
-SITESUBTITLE = 'Transporte Urbano Duitama, Boyacá, Colombia'
-SITEDESCRIPTION = 'Mapa de rutas de buses de Duitama'
-SITEKEYWORDS = 'Bus, Buses, Rutas, Ruta, Transporte, Colombia, Duitama, OpenStreetMap, Transporte público, Datos Abiertos, Open Data'
+SITENAME = u'AndesMap - Rutas de buses cercanas a la Universidad de los Andes'
+SITESUBTITLE = 'Transporte Urbano cerca de los Andes, Bogotá, Colombia'
+SITEDESCRIPTION = 'Mapa de rutas de buses cerca de los Andes '
+SITEKEYWORDS = 'Bus, Buses, Rutas, Ruta, Transporte, Colombia, Bogotá, OpenStreetMap, Transporte público, Datos Abiertos, Open Data, Universidad de los Andes'
 
 USE_LESS = True
-SITEURL = 'https://jhergon.github.io'
+SITEURL = 'https://uniandesmap.github.io'
 #SITEURL = 'http://localhost:8000'
 #SITELOGO = '/images/mapanica-rutas.png'
 THEME = 'themes/mombacho'
