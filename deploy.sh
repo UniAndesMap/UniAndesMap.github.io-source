@@ -3,7 +3,7 @@
 # Travis was configured to push in the remote repository.
 
 BRANCH=master
-TARGET_REPO=UniAndesMap/uniandesmap.github.io.git
+TARGET_REPO=UniAndesMap/UniAndesMap.github.io.git
 PELICAN_OUTPUT_FOLDER=output
 
 echo -e "Building DuitaMap"
