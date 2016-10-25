@@ -4,10 +4,10 @@
 from __future__ import unicode_literals
 
 AUTHOR = u'BogoMap Team, Proyecto Curuba'
-SITENAME = u'AndesMap - Rutas de buses cercanas a la Universidad de los Andes'
-SITESUBTITLE = 'Transporte Urbano cerca de los Andes, Bogotá, Colombia'
-SITEDESCRIPTION = 'Mapa de rutas de buses cerca de los Andes '
-SITEKEYWORDS = 'Bus, Buses, Rutas, Ruta, Transporte, Colombia, Bogotá, OpenStreetMap, Transporte público, Datos Abiertos, Open Data, Universidad de los Andes'
+SITENAME = u'UniAndesMap - Rutas de buses hacia la Universidad de los Andes'
+SITESUBTITLE = 'Transporte Urbano hacia los Andes, Bogotá, Colombia'
+SITEDESCRIPTION = 'Mapa de rutas de buses hacia la Universidad de los Andes '
+SITEKEYWORDS = 'Bus, Buses, Rutas, Ruta, Transporte, Colombia, Bogotá, OpenStreetMap, Transporte público, Datos Abiertos, Open Data, Universidad de los Andes, proyecto Curuba'
 
 USE_LESS = True
 SITEURL = 'https://uniandesmap.github.io'
